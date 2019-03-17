@@ -8,6 +8,8 @@ public interface UsersService {
 	
 	public boolean register(Users user);
 	
+	public Users save(Users user);
+	
 	public boolean delete(Long id);
 	
 	public Collection<Users> searchAll();

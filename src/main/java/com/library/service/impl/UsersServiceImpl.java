@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.library.dao.UserDAO;
+import com.library.domain.Author;
 import com.library.domain.Users;
 import com.library.service.UsersService;
 
@@ -50,8 +51,25 @@ public class UsersServiceImpl implements UsersService {
 	}
 
 	public Users searchById(Long bookId) {
-		// TODO Auto-generated method stub
 		return userDao.searchById(bookId);
+	}
+
+
+	@Override
+	public Users save(Users user) {
+		Users userToUpdate = userDao.searchById(user.getId());
+		
+		if(userToUpdate != null)
+		{
+			userToUpdate.setName(user.getName());
+			userToUpdate.setSurname(user.getSurname());
+			userToUpdate.setCity(user.getCity());
+			userToUpdate.setEmail(user.getEmail());
+			userToUpdate.setPostcode(user.getPostcode());
+			userToUpdate.setAddress(user.getAddress());
+			return userDao.save(userToUpdate);
+		}
+		return userDao.save(user);
 	}
 
 }

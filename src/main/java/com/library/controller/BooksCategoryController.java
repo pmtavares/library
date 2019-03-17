@@ -34,15 +34,13 @@ public class BooksCategoryController {
 	
 	@RequestMapping(value="/categories/register", method=RequestMethod.POST)
 	public boolean registerCategory(@RequestBody BooksCategory category)
-	{		
-		
+	{				
 		return booksCategory.register(category);
 	}
 	
 	@RequestMapping(value="/categories/save", method=RequestMethod.PUT)
 	public BooksCategory updateCategory(@RequestBody BooksCategory category)
-	{		
-		
+	{				
 		return booksCategory.save(category);
 	}
 	

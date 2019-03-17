@@ -30,6 +30,11 @@ public class UserDAO {
 		userRepository.save(user);
 	}
 	
+	public Users save(Users user)
+	{
+		return userRepository.save(user);
+	}
+	
 	public void deleteById(Long id)
 	{
 		Users user = userRepository.searchById(id);

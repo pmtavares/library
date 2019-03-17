@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.library.dao.AuthorDAO;
 import com.library.domain.Author;
+import com.library.domain.BooksCategory;
 import com.library.service.AuthorService;
 
 
@@ -31,6 +32,22 @@ public class AuthorServiceImpl implements AuthorService {
 		}
 		
 
+	}
+	
+	@Override
+	public Author save(Author author) {
+		
+		Author authorToUpdate = authorDao.searchById(author.getId());
+		
+		if(authorToUpdate != null)
+		{
+			authorToUpdate.setName(author.getName());
+			authorToUpdate.setSurname(author.getSurname());
+			return authorDao.save(authorToUpdate);
+		}
+		return authorDao.save(author);
+		
+			
 	}
 
 	@Override

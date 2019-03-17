@@ -21,6 +21,11 @@ public class AuthorDAO{
 		authorRepository.save(author);
 	}
 	
+	public Author save(Author author)
+	{
+		return authorRepository.save(author);
+	}
+	
 	public Author searchById(Long id) {
 		Author author = authorRepository.searchById(id);
 		return author;
