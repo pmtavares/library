@@ -52,4 +52,9 @@ public class BookServiceImpl implements BookService {
 		return book;
 	}
 
+	@Override
+	public Book save(Book book) {
+		return bookDao.save(book);
+	}
+
 }

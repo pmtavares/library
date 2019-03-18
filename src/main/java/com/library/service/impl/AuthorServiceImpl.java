@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.library.dao.AuthorDAO;
 import com.library.domain.Author;
-import com.library.domain.BooksCategory;
 import com.library.service.AuthorService;
 
 

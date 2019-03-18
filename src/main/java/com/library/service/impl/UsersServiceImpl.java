@@ -5,7 +5,6 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.library.dao.UserDAO;
-import com.library.domain.Author;
 import com.library.domain.Users;
 import com.library.service.UsersService;
 

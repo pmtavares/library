@@ -19,6 +19,11 @@ public class BookDAO {
 		bookRepository.save(book);
 	}
 	
+	public Book save(Book book)
+	{
+		return bookRepository.save(book);
+	}
+	
 	public Book searchById(Long id) {
 		Book book = bookRepository.searchById(id);
 		return book;

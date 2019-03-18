@@ -8,6 +8,8 @@ public interface BookService {
 	
 	public boolean register(Book book);
 	
+	public Book save(Book book);
+	
 	public boolean delete(Long id);
 	
 	public Collection<Book> searchAll();
