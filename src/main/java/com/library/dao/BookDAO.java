@@ -12,7 +12,7 @@ import com.library.repository.BooksRepository;
 public class BookDAO {
 	
 	@Autowired
-	BooksRepository bookRepository;
+	private BooksRepository bookRepository;
 	
 	public void register(Book book)
 	{
